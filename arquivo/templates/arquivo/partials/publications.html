@@ -1,0 +1,18 @@
+<div class="publications-items many">
+    <a href="{% url 'arquivos:detail' objeto.id %}" class="publications-link">
+        <div class="arquivo arquivo-files">
+            <div class="imagem imagem-files">
+                <img src="{{ objeto.thumbnail.url }}" alt="{{objeto.titulo}}">
+            </div>
+
+            <div class="arquivo-info arquivo-info-files">
+                <div class="titulo">
+                    <h4>{{ objeto.titulo }}</h4>
+                </div>
+                <div class="data">
+                    <small>{{ objeto.created_at|date:"d/m/Y" }}</small>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>

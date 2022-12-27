@@ -1,0 +1,142 @@
+<div class="publications-items">
+    <div class="arquivo ">
+        <div class="imagem-detail">
+            <a href="{{objeto.arquivo.url}}">
+                <img src="{{ objeto.thumbnail.url }}" alt="{{ objeto.titulo }}">
+            </a>
+        </div>
+        <div class="arquivo-info">
+            {% if objeto.nome_produtor %}
+            <div class="info-produtor info">
+                <div class="titulo-detail">
+                    Nome do produtor
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.nome_produtor}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.nome_diretor %}
+            <div class="info-diretor info">
+                <div class="titulo-detail">
+                    Diretor
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.nome_diretor}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.titulo %}
+            <div class="info-titulo info">
+                <div class="titulo-detail">
+                    Titulo
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.titulo}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.data %}
+            <div class="info-data info">
+                <div class="titulo-detail">
+                    Data
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.data|date:"Y"}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.autor %}
+            <div class="info-autor info">
+                <div class="titulo-detail">
+                    Autor
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.autor}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.dimensao_suporte %}
+            <div class="info-dimensao info">
+                <div class="titulo-detail">
+                    Dimensão e suporte
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.dimensao_suporte}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.entidade_custodiadora %}
+            <div class="info-entidade info">
+                <div class="titulo-detail">
+                    Entidade custodiadora
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.entidade_custodiadora}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.localizacao_fisica %}
+            <div class="info-localizacao info">
+                <div class="titulo-detail">
+                    Localização física
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.localizacao_fisica}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.descricao %}
+            <div class="info-descricao info">
+                <div class="titulo-detail">
+                    Descrição
+                </div>
+                <div class="extend-titulo">
+                    {{objeto.descricao}}
+                </div>
+            </div>
+            {%endif%}
+
+            {% if objeto.nota_explicativa %}
+            <div class="info-nota info">
+                <div class="titulo-detail">
+                    Nota explicativa
+                </div>
+                <div class="extend-titulo">
+                    <p>
+                        {{objeto.nota_explicativa}}
+                    </p>
+
+                </div>
+            </div>
+            {%endif%}
+
+
+            <div class="info-categorias info">
+                <div class="titulo-detail">
+                    Categorias
+                </div>
+                <div class="extend-titulo categorias">
+                    {%for cat in categoria%}
+                    <div class="categorias-detail">
+                        <a href="{% url 'arquivos:categorys'  cat  %}">
+                            {{cat}}
+                        </a>
+                    </div>
+                    
+                    {%endfor%}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

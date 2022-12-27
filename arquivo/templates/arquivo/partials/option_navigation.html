@@ -1,0 +1,66 @@
+<div class="option-navigation">
+    <div class="items-options">
+        <div class="header-option">
+            <h5>Produtor</h5>
+        </div>
+        <div class="content-option">
+            <ul class="content-list">
+                {%for produtor in produtores %}
+                <a href="{%url 'arquivos:categorys' produtor.slug %}">
+                    <li class="content-item">{{ produtor.nome_produtor }}</li>
+                </a>
+                
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+    <div class="items-options">
+        <div class="header-option">
+            <h5>Recém adicionados</h5>
+        </div>
+        <div class="content-option">
+            <ul class="content-list">
+                {%for titulo in titulos %}
+                <a href="{%url 'arquivos:categorys' titulo.slug %}">
+                    <li class="content-item">{{ titulo.titulo }}</li>
+                </a>
+                
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+    <div class="items-options">
+        <div class="header-option">
+            <h5>Categorias</h5>
+        </div>
+        <div class="content-option">
+            <ul class="content-list">
+                {%for categoria in categorias %}
+                <a href="{%url 'arquivos:categorys' categoria.slug %}">
+                    <li class="content-item">{{ categoria.nome_categoria }}</li>
+                </a>
+                
+                {%endfor%}
+            </ul>
+        </div>
+    </div>
+    <div class="items-options">
+        <div class="header-option">
+            <h5>Tipos de objetos</h5>
+        </div>
+        <div class="content-option">
+            <ul class="content-list">
+                <a href="{%url 'arquivos:images'%}">
+                    <li class="content-item">Imagens <small>{{num_img}}</small></li>
+                </a>
+                <a href="{%url 'arquivos:documents'%}">
+                    <li class="content-item">Documentos <small>{{num_document}}</small></li></li>
+                </a>
+                <a href="{%url 'arquivos:videos'%}">
+                    <li class="content-item">Vídeos <small>{{num_video}}</small></li></li>
+                </a>
+                
+            </ul>
+        </div>
+    </div>
+</div>

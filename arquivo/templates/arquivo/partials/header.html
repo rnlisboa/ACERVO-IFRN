@@ -1,0 +1,23 @@
+{%load static %}
+<header class="main-header-container container">
+    <nav class="nav-header-container">
+        <div class="brand-img">
+            <a href="{% url 'arquivos:files'%}">
+                <img src="{% static 'arquivo/img/logo.png' %}" alt="logo do ifrn" srcset="">
+            </a>
+        </div>
+
+
+
+        <div class="nav-navigation">
+            <div class="nav-search">
+                <form action="{% url 'arquivos:search' %}" method="GET" class="nav-form">
+                    <input type="text" name="query" class="search-input">
+                    <button type="submit" class="search-button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>

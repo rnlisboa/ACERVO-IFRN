@@ -1,0 +1,27 @@
+{% extends 'global/base.html'%}
+
+<div class="container">
+    <div class="message">
+        <h1>
+            Exibindo resultados para [nome]
+        </h1>
+    </div>
+</div>
+
+{%block content %}
+{% include 'arquivo/partials/option_navigation.html' %}
+<div class="content-items-field">
+    <div class="main-content-files">
+        {%for objeto in objetos %}
+        {% include 'arquivo/partials/publications.html' %}
+        {%empty%}
+        <h3>Não há arquivos publicados</h3>
+        {%endfor%}
+
+    </div>
+
+
+</div>
+
+{%endblock%}
+
