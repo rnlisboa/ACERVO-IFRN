@@ -20,7 +20,7 @@ class Produtor(models.Model):
     
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug += f'-{slugify(self.nome_produtor)}'
+            self.slug = f'-{slugify(self.nome_produtor)}'
 
         super().save(*args, **kwargs)
 
@@ -34,7 +34,7 @@ class Categoria(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug += f'-{slugify(self.nome_categoria)}'
+            self.slug = f'-{slugify(self.nome_categoria)}'
 
         super().save(*args, **kwargs)
 
